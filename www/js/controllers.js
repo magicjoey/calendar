@@ -25,4 +25,18 @@ angular.module('starter.controllers', [])
   $scope.settings = {
     enableFriends: true
   };
+})
+
+.controller('HomeCtrl', function($scope){
+
+})
+
+.controller('MeCtrl', function($scope){
+
+})
+
+.controller('CalendarCtrl', function($scope){
+  
 });
+
+
