@@ -1,16 +1,25 @@
-<ion-view view-title="Account">
+<ion-view view-title="我的信息">
   <ion-content>
-    <ion-list>
-      <ion-item type="item-text-wrap" href="#/tab/">
+    <!--<ion-list>-->
+      <ion-item type="item-text-wrap" ui-sref="tab.profile">
         个人信息
       </ion-item>
 
-      <ion-item type="item-text-wrap" href="#/tab/">
-
+      <ion-item type="item-text-wrap" ui-sref="tab.mycalendar">
+        我的日历
       </ion-item>
-    <ion-toggle  ng-model="settings.enableFriends">
-        Enable Friends
+      <ion-item type="item-text-wrap" ui-sref="tab.invest">
+        我的投资
+      </ion-item>
+      <ion-item type="item-text-wrap" ui-sref="tab.salary">
+        工资计算
+      </ion-item>
+      <ion-item type="item-text-wrap" ui-sref="tab.buylist">
+        购买列表
+      </ion-item>
+      <ion-toggle ng-bind="settings.enableReminder">
+        是否提醒
     </ion-toggle>
-    </ion-list>
+    <!--</ion-list>-->
   </ion-content>
 </ion-view>

@@ -1,3 +1,4 @@
+// var config = require("./config.js");
 angular.module('starter.services', [])
 
 .factory('Chats', function() {
@@ -47,4 +48,23 @@ angular.module('starter.services', [])
       return null;
     }
   };
+})
+
+.factory('$data', function($http){
+
+  return {
+    login: function(tableName, requestParams){
+      console.log("test:"+requestParams);
+      var url = "http://127.0.0.1:8000/rest/login?userName="+requestParams.userName+"&password="+requestParams.password;
+      // console.log(url);
+      return $http.jsonp(url);//,{"userName":requestParams.userName, "password":requestParams.password});
+    },
+    register:function(tableName, requestParams){
+      var url = "http://localhost:8000/rest/register?userName="+requestParams.userName+"&password="+requestParams.password;
+      console.log(url);
+      return $http.jsonp(url);
+    }
+  }
+
+
 });
