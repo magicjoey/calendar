@@ -60,25 +60,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
   })
 
 
-  .state('tab.chats', {
-      url: '/chats',
-      views: {
-        'tab-chats': {
-          templateUrl: 'templates/tab-chats.html',
-          controller: 'ChatsCtrl'
-        }
-      }
-    })
-    .state('tab.chat-detail', {
-      url: '/chats/:chatId',
-      views: {
-        'tab-chats': {
-          templateUrl: 'templates/chat-detail.html',
-          controller: 'ChatDetailCtrl'
-        }
-      }
-    })
-
   .state('tab.account', {
     url: '/account',
     views: {
@@ -122,49 +103,49 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       }
     })
 
-    .state('tab.login', {
-      url: '/login',
+    .state('tab.me-login', {
+      url: '/me/login',
       views: {
-        'tab-login': {
+        'tab-me': {
           templateUrl: 'templates/tab-login.html',
           controller: 'LoginCtrl'
         }
       }    })
 
-    .state('tab.register', {
-      url: '/register',
+    .state('tab.me-register', {
+      url: '/me/register',
       views: {
-        'tab-register': {
+        'tab-me': {
           templateUrl: 'templates/tab-register.html',
           controller: 'RegisterCtrl'
         }
       }
     })
 
-    .state('tab.profile', {
-      url: '/profile',
+    .state('tab.me-profile', {
+      url: '/me/profile',
       views: {
-        'tab-profile': {
+        'tab-me': {
           templateUrl: 'templates/tab-profile.html',
           controller: 'ProfileCtrl'
         }
       }
     })
 
-    .state('tab.mycalendar', {
-      url: '/mycalendar',
+    .state('tab.me-calendar', {
+      url: '/me/calendar',
       views: {
-        'tab-mycalendar': {
+        'tab-me': {
           templateUrl: 'templates/tab-mycalendar.html',
           controller: 'MyCalendarCtrl'
         }
       }
     })
 
-    .state('tab.invest', {
-      url: '/invest',
+    .state('tab.me-invest', {
+      url: '/me/invest',
       views: {
-        'tab-invest': {
+        'tab-me': {
           templateUrl: 'templates/tab-invest.html',
           controller: 'InvestCtrl'
         }
@@ -181,14 +162,28 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       }
     })
 
-    .state('tab.buylist', {
-      url: '/buylist',
+    .state('tab.me-buylist', {
+      url: '/me/buylist',
       views: {
-        'tab-buylist': {
+        'tab-me': {
           templateUrl: 'templates/tab-buylist.html',
           controller: 'BuyListCtrl'
         }
       }
+    })
+
+    .state('tab.me-aboutus',{
+      url: '/me/aboutus',
+      views:{
+        'tab-me':{
+          templateUrl: 'templates/tab-aboutus.html',
+          controller:'AboutUsCtrl'
+        }
+      }
+    })
+
+    .state('aboutUs',{
+      templateUrl:'templates/aboutUs.html'
     })
   ;
 

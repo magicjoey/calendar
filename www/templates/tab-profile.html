@@ -1,10 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+<ion-view view-title="个人信息">
+  <ion-content>
+    <label class="item item-input item-stacked-label">
+      <span class="input-label">登录名</span>
+      <input placeholder="登录名" disabled="disabled" type="text" ng-model="user.userName"/>
+    </label>
+    <div class="item item-input item-stacked-label">
+      <span class="input-label">昵称</span>
+      <input placeholder="昵称" type="text" ng-model="user.nickName"/>
+    </div>
 
-</body>
-</html>
+    <div class="padding">
+      <button class="button button-block button-positive">提交修改</button>
+    </div>
+  </ion-content>
+</ion-view>
